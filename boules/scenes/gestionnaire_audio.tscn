@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bxebuxmtvdrrl"]
+
+[ext_resource type="Script" uid="uid://by3fhacairofa" path="res://gestionnaire_audio.gd" id="1_divok"]
+
+[node name="GestionnaireAudio" type="Node" unique_id=115372595]
+script = ExtResource("1_divok")
+
+[node name="Musique" type="AudioStreamPlayer" parent="." unique_id=1013814617]
+
+[node name="Bruitage" type="AudioStreamPlayer" parent="." unique_id=1139455177]
