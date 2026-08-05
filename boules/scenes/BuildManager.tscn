@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dsc3mftas6aqu"]
+
+[ext_resource type="Script" uid="uid://byjbnt26ce24e" path="res://scripts/BuildManager.gd" id="1_sivrn"]
+
+[node name="BuildManager" type="Node" unique_id=1703092727]
+script = ExtResource("1_sivrn")
