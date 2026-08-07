@@ -2,5 +2,98 @@
 
 [ext_resource type="Script" uid="uid://byjbnt26ce24e" path="res://scripts/BuildManager.gd" id="1_sivrn"]
 
-[node name="BuildManager" type="Node" unique_id=1703092727]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sivrn"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhgqv"]
+bg_color = Color(1, 0.8156863, 0.8392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxtcl"]
+bg_color = Color(0.5176471, 0.49411765, 0.49411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8omi"]
+bg_color = Color(0.2784314, 0.49411765, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhmeo"]
+bg_color = Color(0.6, 0.6, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bw5pq"]
+bg_color = Color(0.59607846, 0.59607846, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yp2e"]
+bg_color = Color(1, 0.15686275, 0.12941177, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j5jb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84itw"]
+bg_color = Color(0.49411765, 0.5137255, 0.5058824, 1)
+
+[node name="BuildManager" type="Node2D" unique_id=935920682]
 script = ExtResource("1_sivrn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2136320458]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1612983872]
+custom_minimum_size = Vector2(100, 0)
+anchors_preset = -1
+anchor_right = 0.60200006
+anchor_bottom = 0.554
+offset_right = -653.5041
+offset_bottom = -318.992
+theme_override_constants/separation = 10
+
+[node name="ButtonYellow" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=309701078]
+modulate = Color(1, 0.8784314, 0, 1)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(900, 0)
+offset_transform_visual_only = false
+theme_override_styles/normal = SubResource("StyleBoxFlat_sivrn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dhgqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wxtcl")
+
+[node name="ButtonBlue" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=2143154378]
+modulate = Color(0, 1, 1, 1)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(900, 0)
+offset_transform_visual_only = false
+theme_override_styles/normal = SubResource("StyleBoxFlat_u8omi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rhmeo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bw5pq")
+
+[node name="ButtonRed" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1201465105]
+modulate = Color(1, 0.16862746, 0.09019608, 1)
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(900, 0)
+offset_transform_visual_only = false
+theme_override_styles/normal = SubResource("StyleBoxFlat_4yp2e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4j5jb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_84itw")
+
+[node name="ButtonVerify" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1237635258]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(900, 200)
+offset_transform_visual_only = false
+text = "Submit Draw"
+
+[node name="ButtonClear" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1868214057]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(900, 50)
+offset_transform_visual_only = false
+text = "Clear"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonYellow" to="." method="_on_button_yellow_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonBlue" to="." method="_on_button_blue_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonRed" to="." method="_on_button_red_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonVerify" to="." method="_on_button_verify_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonClear" to="." method="_on_button_clear_pressed"]
